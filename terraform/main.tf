@@ -4,3 +4,7 @@ provider "azurerm" {
   version = "=2.18.0"
   features {}
 }
+
+locals {
+    prefix = "hcs-demo"
+}

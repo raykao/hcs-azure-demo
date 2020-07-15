@@ -1,29 +1,29 @@
 resource azurerm_resource_group default {
-  name = "default-rg"
+  name = "${local.prefix}-default-rg"
   location = var.location
 }
 
 resource azurerm_resource_group consul {
-  name = "consul-rg"
+  name = "${local.prefix}-consul-rg"
   location = var.location
 }
 
 resource azurerm_resource_group hcs {
-  name = "hcs-rg"
+  name = "${local.prefix}-hcs-rg"
   location = var.location
 }
 
 resource azurerm_resource_group frontend {
-  name = "frontend-rg"
+  name = "${local.prefix}-frontend-rg"
   location = var.location
 }
 
 resource azurerm_resource_group backend {
-  name = "backend-rg"
+  name = "${local.prefix}-backend-rg"
   location = var.location 
 }
 
 resource azurerm_resource_group aks {
-  name = "aks-rg"
+  name = "${local.prefix}-aks-rg"
   location = var.location
 }
