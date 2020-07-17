@@ -1,5 +1,5 @@
-resource azurerm_resource_group default {
-  name = "${local.prefix}-default-rg"
+resource azurerm_resource_group core {
+  name = "${local.prefix}-core-rg"
   location = var.location
 }
 
