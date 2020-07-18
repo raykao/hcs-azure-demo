@@ -32,14 +32,14 @@
     "verify_outgoing": true,
     "verify_server_hostname": true,
     "ca_file": "/opt/consul/config/ssl/consul-agent-ca.pem",
-    "cert_file": "/opt/consul/config/ssl/dc1-server-consul-0.pem",
-    "key_file": "/opt/consul/config/ssl/dc1-server-consul-0-key.pem",
+    "cert_file": "/opt/consul/config/ssl/ca/dc1-server-consul-0.pem",
+    "key_file": "/opt/consul/config/ssl/ca/dc1-server-consul-0-key.pem",
     "auto_encrypt": {
         "allow_tls": true
     },
 
     "ca_config": {
-        "private_key": "/opt/consul/config/ssl/consul-agent-ca-key.pem",
-        "root_cert": "/opt/consul/config/ssl/consul-agent-ca.pem"
+        "private_key": "/opt/consul/config/ssl/ca/consul-agent-ca-key.pem",
+        "root_cert": "/opt/consul/config/ssl/ca/consul-agent-ca.pem"
     }
 }
