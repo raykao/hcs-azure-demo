@@ -30,3 +30,33 @@ resource azurerm_firewall_application_rule_collection "updates" {
     }
   }
 }
+
+resource "azurerm_firewall_network_rule_collection" "ntp" {
+  name                = "ntp"
+  azure_firewall_name = azurerm_firewall.core.name
+  resource_group_name = azurerm_resource_group.core.name
+  priority            = 100
+  action              = "Allow"
+
+  rule {
+    name = "ntp"
+
+    source_addresses = [
+      "10.0.0.0/16",
+    ]
+
+    destination_ports = [
+      "123",
+    ]
+
+    destination_addresses = [
+      "91.189.94.4",
+      "91.189.89.198",
+    ]
+
+    protocols = [
+      "TCP",
+      "UDP",
+    ]
+  }
+}
