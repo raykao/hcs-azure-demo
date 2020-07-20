@@ -3,7 +3,7 @@ Description="HashiCorp Consul - Service Mesh Made Easy"
 Documentation=https://www.consul.io/
 Requires=network-online.target
 After=network-online.target
-ConditionFileNotEmpty=/opt/consul/config/consul-server.json
+ConditionFileNotEmpty=/opt/consul/config/consul.json
 
 [Service]
 Type=notify

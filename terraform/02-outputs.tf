@@ -13,3 +13,7 @@ output "frontend-pip" {
 output "frontend-fqdn" {
     value = azurerm_public_ip.frontend.fqdn
 }
+
+output "backend-privip" {
+    value = azurerm_network_interface.rkbackend.private_ip_address
+}
